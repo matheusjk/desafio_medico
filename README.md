@@ -116,3 +116,18 @@ Esse desafio de engenharia de dados pleno resolvendo desde a ingestão do dado v
 </ul>
 
 ##
+
+<br>
+
+<h4> TELA ARQUITETURA </h4>
+
+<img src="print_telas/desafioEngenhariaSaude.png">
+
+<p> Na tela é possivel visualizar a arquitetura e todas as lib/ferramentas utilizadas no projeto </p>
+
+<ul>
+
+
+</ul>
+
+##
