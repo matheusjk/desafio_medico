@@ -1,0 +1,86 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 123@mudar*
+      POSTGRES_DB: desafio
+    ports:
+      - "5432:5432"
+    networks:
+      - app-network
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  spark:
+    image: bitnami/spark:3.3.0
+    container_name: spark
+    environment:
+      - SPARK_MODE=master
+    ports:
+      - "8080:8080" # Spark Master UI
+      - "7077:7077" # Spark Master port
+    networks:
+      - app-network
+    depends_on:
+      - postgres
+
+  metabase:
+    image: metabase/metabase:latest
+    container_name: metabase
+    hostname: metabase
+    volumes:
+      - /dev/urandom:/dev/random:ro
+    ports:
+      - 3000:3000
+    environment:
+      MB_DB_TYPE: postgres
+      MB_DB_DBNAME: desafio
+      MB_DB_PORT: 5432
+      MB_DB_USER: admin
+      MB_DB_PASS: 123@mudar*
+      MB_DB_HOST: postgres
+    networks:
+      - app-network
+    healthcheck:
+      test: curl --fail -I http://localhost:3000/api/health || exit 1
+      interval: 15s
+      timeout: 5s
+      retries: 5
+    depends_on:
+      - postgres
+      
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    ports:
+      - "11434:11434" # Porta padrão do Ollama
+    networks:
+      - app-network
+    volumes:
+      - ollama_data:/root/.ollama # Persiste os dados dos modelos baixados
+    restart: unless-stopped
+    
+  jupyter:
+    image: jupyter/pyspark-notebook:latest
+    container_name: jupyter
+    environment:
+      - PYSPARK_SUBMIT_ARGS=--master spark://spark:7077 pyspark-shell
+    ports:
+      - "8888:8888" # Porta do Jupyter Notebook
+    networks:
+      - app-network
+    volumes:
+      - /home/matheus/Documentos/notebooks/work # Pasta local para salvar notebooks
+    depends_on:
+      - spark 
+
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  ollama_data:
