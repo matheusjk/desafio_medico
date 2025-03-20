@@ -57,7 +57,7 @@ Esse desafio de engenharia de dados pleno resolvendo desde a ingestão do dado v
 
 <h4> TELAS METABASE </h4>
 
-<img src="prints_telas/Captura de tela de 2025-03-19 21-23-26.png">
+<img src="print_telas/Captura de tela de 2025-03-19 21-23-26.png">
 
 <p> Na tela é possivel visualizar o resultado no metabase "Condições clinicas mais comuns". </p>
 
