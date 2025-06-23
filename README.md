@@ -26,9 +26,6 @@
 
 * Dado o contexto médico fui desafiado pela empresa Minsait a rascunhar uma arquitetura de dados e analise, fazendo a engenharia de dados resolvendo desde a ingestão do dado via arquivos JSON até sua implementação e usabilidade na camada de visualização deixando livre para consultas SQL.
 
-##
-
-
 ---
 
 ## <h4> Como rodar o projeto? </h4>
