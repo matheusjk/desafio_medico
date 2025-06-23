@@ -1,4 +1,3 @@
-# desafio_medico
 <h2> Desafio Engenheiro de Dados Pleno Minsait </h2>
 
 
@@ -25,7 +24,7 @@
 ## <h4> O que é o projeto? </h4>
 
 
-* Esse desafio de engenharia de dados pleno resolvendo desde a ingestão do dado via arquivos JSON até sua implementação e usabilidade na camada de visualização deixando livre para consultas SQL.
+* Dado o contexto médico fui desafiado pela empresa Minsait a rascunhar uma arquitetura de dados e analise, fazendo a engenharia de dados resolvendo desde a ingestão do dado via arquivos JSON até sua implementação e usabilidade na camada de visualização deixando livre para consultas SQL.
 
 ##
 
