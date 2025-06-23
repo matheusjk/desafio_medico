@@ -26,34 +26,25 @@
 
 ##
 
-<br>
+## <h4> O que é o projeto? </h4>
 
-<h4> O que é o projeto? </h4>
 
-<p>
-Esse desafio de engenharia de dados pleno resolvendo desde a ingestão do dado via arquivos JSON até sua implementação e usabilidade na camada de visualização deixando livre para consultas SQL.
-</p>
+* Esse desafio de engenharia de dados pleno resolvendo desde a ingestão do dado via arquivos JSON até sua implementação e usabilidade na camada de visualização deixando livre para consultas SQL.
 
 ##
 
 
+---
+
+## <h4> Como rodar o projeto? </h4>
+
+
+Com o arquivo docker-compose.yaml em mãos na pasta do projeto abre um terminal e rode "sudo docker compose up -d" ele vai levantar todos os containers usados no projeto e ao mesmo tempo fazer a rede para que os containers rodem em rede. Verifique com o comando "sudo docker network inspect documentos_app-network" para ver quais IP's cada container pegou depois disso abre o desafio.ipynb no IP atribuido ao container do jupyter aqui no meu pc abri em http://127.0.0.1:8888 se o seu jupyter te pedir algum token rode esse comando "sudo docker logs jupyter" e pegue a url com o token!
 
 
 ##
 
-<br>
-
-<h4> Como rodar o projeto? </h4>
-
-<p>
-
-    Com o arquivo docker-compose.yaml em mãos na pasta do projeto abre um terminal e rode "sudo docker compose up -d" ele vai levantar todos os containers usados no projeto e ao mesmo tempo fazer a rede para que os containers rodem em rede. Verifique com o comando "sudo docker network inspect documentos_app-network" para ver quais IP's cada container pegou depois disso abre o desafio.ipynb no IP atribuido ao container do jupyter aqui no meu pc abri em http://127.0.0.1:8888 se o seu jupyter te pedir algum token rode esse comando "sudo docker logs jupyter" e pegue a url com o token!
-
-</p>
-
-##
-
-<br>
+---
 
 <h4> TELAS METABASE </h4>
 
