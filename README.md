@@ -28,7 +28,7 @@
 
 ---
 
-## <h4> Como rodar o projeto? </h4>
+<h4> Como rodar o projeto? </h4>
 
 
 * Com o arquivo docker-compose.yaml em mãos na pasta do projeto abre um terminal e rode "sudo docker compose up -d" ele vai levantar todos os containers usados no projeto e ao mesmo tempo fazer a rede para que os containers rodem em rede. Verifique com o comando "sudo docker network inspect documentos_app-network" para ver quais IP's cada container pegou depois disso abre o desafio.ipynb no IP atribuido ao container do jupyter aqui no meu pc abri em http://127.0.0.1:8888 se o seu jupyter te pedir algum token rode esse comando "sudo docker logs jupyter" e pegue a url com o token!
